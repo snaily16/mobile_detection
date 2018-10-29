@@ -1,4 +1,4 @@
-## Shoes Detection
+## Mobile Detection
 
 ## Dependencies
 
@@ -8,7 +8,7 @@ Python3, tensorflow 1.0, numpy, opencv 3.
 
 You can choose _one_ of the following three ways to get started with darkflow.
 
-1. Just build the Cython extensions in place. NOTE: If installing this way you will have to use `./flow` in the cloned darkflow directory instead of `flow` as darkflow is not installed globally.
+1. Just build the Cython extensions in place. 
     ```
     python3 setup.py build_ext --inplace
     ```
@@ -23,7 +23,14 @@ You can choose _one_ of the following three ways to get started with darkflow.
     pip install .
     ```
 
-4. After building the Cython extension using any of above three methods, run this command.
-	'''
-	python3 realtime.py
-	'''
+After building the Cython extension, run this command.
+	```
+    python3 realtime.py
+    ```
+    
+It will start your videocamera and detect the mobile phones.
+
+
+NOTE: If you want to change it to any other object detection then, 
+* Open realtime.py
+* Edit line no *39* : if label == 'cell phone' to any object name from cfg/coco.names.
